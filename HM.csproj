@@ -54,6 +54,30 @@
     <Compile Include="ControleUsuarios\CU_AddQuarto.Designer.cs">
       <DependentUpon>CU_AddQuarto.cs</DependentUpon>
     </Compile>
+    <Compile Include="ControleUsuarios\CU_Checkout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControleUsuarios\CU_Checkout.Designer.cs">
+      <DependentUpon>CU_Checkout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControleUsuarios\CU_DetalhesHospede.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControleUsuarios\CU_DetalhesHospede.Designer.cs">
+      <DependentUpon>CU_DetalhesHospede.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControleUsuarios\CU_Funcionario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControleUsuarios\CU_Funcionario.Designer.cs">
+      <DependentUpon>CU_Funcionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControleUsuarios\CU_Registro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControleUsuarios\CU_Registro.Designer.cs">
+      <DependentUpon>CU_Registro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,10 +90,27 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="meuhotelDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>meuhotelDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ControleUsuarios\CU_AddQuarto.resx">
       <DependentUpon>CU_AddQuarto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControleUsuarios\CU_Checkout.resx">
+      <DependentUpon>CU_Checkout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControleUsuarios\CU_DetalhesHospede.resx">
+      <DependentUpon>CU_DetalhesHospede.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControleUsuarios\CU_Funcionario.resx">
+      <DependentUpon>CU_Funcionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControleUsuarios\CU_Registro.resx">
+      <DependentUpon>CU_Registro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
@@ -86,6 +127,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="meuhotelDataSet.xsc">
+      <DependentUpon>meuhotelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="meuhotelDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>meuhotelDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="meuhotelDataSet.xss">
+      <DependentUpon>meuhotelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\HM.ControleUsuarios.CU_AddQuarto.datasource" />
+    <None Include="Properties\DataSources\HM.ControleUsuarios.CU_Checkout.datasource" />
+    <None Include="Properties\DataSources\HM.ControleUsuarios.CU_Registro.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

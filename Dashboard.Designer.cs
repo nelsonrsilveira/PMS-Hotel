@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.PainelSeletor = new System.Windows.Forms.Panel();
             this.btnFuncionario = new System.Windows.Forms.Button();
             this.btnCheckOut = new System.Windows.Forms.Button();
@@ -39,6 +40,16 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.PictureBox();
+            this.CU_DetalhesHospede2 = new HM.ControleUsuarios.CU_DetalhesHospede();
+            this.CU_Cancelar1 = new HM.ControleUsuarios.CU_Cancelar();
+            this.cU_AddQuarto3 = new HM.ControleUsuarios.CU_AddQuarto();
+            this.cU_Registro3 = new HM.ControleUsuarios.CU_Registro();
+            this.cU_AddQuarto2 = new HM.ControleUsuarios.CU_AddQuarto();
+            this.cU_Registro2 = new HM.ControleUsuarios.CU_Registro();
+            this.CU_Funcionario1 = new HM.ControleUsuarios.CU_Funcionario();
+            this.CU_DetalhesHospede1 = new HM.ControleUsuarios.CU_DetalhesHospede();
+            this.CU_Checkout1 = new HM.ControleUsuarios.CU_Checkout();
+            this.CU_Registro1 = new HM.ControleUsuarios.CU_Registro();
             this.CU_AddQuarto1 = new HM.ControleUsuarios.CU_AddQuarto();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -48,6 +59,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnCancelar);
             this.panel1.Controls.Add(this.PainelSeletor);
             this.panel1.Controls.Add(this.btnFuncionario);
             this.panel1.Controls.Add(this.btnCheckOut);
@@ -56,8 +68,20 @@
             this.panel1.Controls.Add(this.btnAdicionarQuarto);
             this.panel1.Location = new System.Drawing.Point(33, 65);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1249, 130);
+            this.panel1.Size = new System.Drawing.Size(1498, 130);
             this.panel1.TabIndex = 0;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(1229, 23);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(236, 85);
+            this.btnCancelar.TabIndex = 17;
+            this.btnCancelar.Text = "Cancelar Hospedagem";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // PainelSeletor
             // 
@@ -66,6 +90,7 @@
             this.PainelSeletor.Name = "PainelSeletor";
             this.PainelSeletor.Size = new System.Drawing.Size(236, 6);
             this.PainelSeletor.TabIndex = 16;
+            this.PainelSeletor.Paint += new System.Windows.Forms.PaintEventHandler(this.PainelSeletor_Paint);
             // 
             // btnFuncionario
             // 
@@ -131,10 +156,20 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel2.Controls.Add(this.CU_DetalhesHospede2);
+            this.panel2.Controls.Add(this.CU_Cancelar1);
+            this.panel2.Controls.Add(this.cU_AddQuarto3);
+            this.panel2.Controls.Add(this.cU_Registro3);
+            this.panel2.Controls.Add(this.cU_AddQuarto2);
+            this.panel2.Controls.Add(this.cU_Registro2);
+            this.panel2.Controls.Add(this.CU_Funcionario1);
+            this.panel2.Controls.Add(this.CU_DetalhesHospede1);
+            this.panel2.Controls.Add(this.CU_Checkout1);
+            this.panel2.Controls.Add(this.CU_Registro1);
             this.panel2.Controls.Add(this.CU_AddQuarto1);
-            this.panel2.Location = new System.Drawing.Point(20, 242);
+            this.panel2.Location = new System.Drawing.Point(20, 247);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1297, 505);
+            this.panel2.Size = new System.Drawing.Size(1297, 593);
             this.panel2.TabIndex = 1;
             // 
             // btnSair
@@ -163,21 +198,106 @@
             this.btnMinimize.TabStop = false;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
+            // CU_DetalhesHospede2
+            // 
+            this.CU_DetalhesHospede2.BackColor = System.Drawing.Color.White;
+            this.CU_DetalhesHospede2.Location = new System.Drawing.Point(0, 0);
+            this.CU_DetalhesHospede2.Name = "CU_DetalhesHospede2";
+            this.CU_DetalhesHospede2.Size = new System.Drawing.Size(1297, 593);
+            this.CU_DetalhesHospede2.TabIndex = 10;
+            // 
+            // CU_Cancelar1
+            // 
+            this.CU_Cancelar1.BackColor = System.Drawing.Color.White;
+            this.CU_Cancelar1.Location = new System.Drawing.Point(3, 3);
+            this.CU_Cancelar1.Name = "CU_Cancelar1";
+            this.CU_Cancelar1.Size = new System.Drawing.Size(1086, 626);
+            this.CU_Cancelar1.TabIndex = 9;
+            // 
+            // cU_AddQuarto3
+            // 
+            this.cU_AddQuarto3.BackColor = System.Drawing.Color.White;
+            this.cU_AddQuarto3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cU_AddQuarto3.Location = new System.Drawing.Point(3, 3);
+            this.cU_AddQuarto3.Name = "cU_AddQuarto3";
+            this.cU_AddQuarto3.Size = new System.Drawing.Size(1276, 593);
+            this.cU_AddQuarto3.TabIndex = 8;
+            this.cU_AddQuarto3.Load += new System.EventHandler(this.cU_AddQuarto3_Load);
+            // 
+            // cU_Registro3
+            // 
+            this.cU_Registro3.BackColor = System.Drawing.Color.White;
+            this.cU_Registro3.Location = new System.Drawing.Point(0, 0);
+            this.cU_Registro3.Name = "cU_Registro3";
+            this.cU_Registro3.Size = new System.Drawing.Size(1353, 593);
+            this.cU_Registro3.TabIndex = 7;
+            // 
+            // cU_AddQuarto2
+            // 
+            this.cU_AddQuarto2.BackColor = System.Drawing.Color.White;
+            this.cU_AddQuarto2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cU_AddQuarto2.Location = new System.Drawing.Point(-3, 0);
+            this.cU_AddQuarto2.Name = "cU_AddQuarto2";
+            this.cU_AddQuarto2.Size = new System.Drawing.Size(1297, 593);
+            this.cU_AddQuarto2.TabIndex = 6;
+            // 
+            // cU_Registro2
+            // 
+            this.cU_Registro2.BackColor = System.Drawing.Color.White;
+            this.cU_Registro2.Location = new System.Drawing.Point(0, 3);
+            this.cU_Registro2.Name = "cU_Registro2";
+            this.cU_Registro2.Size = new System.Drawing.Size(1000, 574);
+            this.cU_Registro2.TabIndex = 5;
+            // 
+            // CU_Funcionario1
+            // 
+            this.CU_Funcionario1.BackColor = System.Drawing.Color.White;
+            this.CU_Funcionario1.Location = new System.Drawing.Point(3, 3);
+            this.CU_Funcionario1.Name = "CU_Funcionario1";
+            this.CU_Funcionario1.Size = new System.Drawing.Size(1034, 626);
+            this.CU_Funcionario1.TabIndex = 4;
+            // 
+            // CU_DetalhesHospede1
+            // 
+            this.CU_DetalhesHospede1.BackColor = System.Drawing.Color.White;
+            this.CU_DetalhesHospede1.Location = new System.Drawing.Point(0, -30);
+            this.CU_DetalhesHospede1.Name = "CU_DetalhesHospede1";
+            this.CU_DetalhesHospede1.Size = new System.Drawing.Size(1034, 626);
+            this.CU_DetalhesHospede1.TabIndex = 3;
+            // 
+            // CU_Checkout1
+            // 
+            this.CU_Checkout1.BackColor = System.Drawing.Color.White;
+            this.CU_Checkout1.Location = new System.Drawing.Point(3, 3);
+            this.CU_Checkout1.Name = "CU_Checkout1";
+            this.CU_Checkout1.Size = new System.Drawing.Size(1000, 574);
+            this.CU_Checkout1.TabIndex = 2;
+            // 
+            // CU_Registro1
+            // 
+            this.CU_Registro1.BackColor = System.Drawing.Color.White;
+            this.CU_Registro1.Location = new System.Drawing.Point(0, 0);
+            this.CU_Registro1.Name = "CU_Registro1";
+            this.CU_Registro1.Size = new System.Drawing.Size(1034, 500);
+            this.CU_Registro1.TabIndex = 1;
+            this.CU_Registro1.Load += new System.EventHandler(this.CU_Registro1_Load);
+            // 
             // CU_AddQuarto1
             // 
             this.CU_AddQuarto1.BackColor = System.Drawing.Color.White;
             this.CU_AddQuarto1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CU_AddQuarto1.Location = new System.Drawing.Point(0, 0);
             this.CU_AddQuarto1.Name = "CU_AddQuarto1";
-            this.CU_AddQuarto1.Size = new System.Drawing.Size(1000, 450);
+            this.CU_AddQuarto1.Size = new System.Drawing.Size(1000, 553);
             this.CU_AddQuarto1.TabIndex = 0;
+            this.CU_AddQuarto1.Load += new System.EventHandler(this.CU_AddQuarto1_Load);
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1329, 728);
+            this.ClientSize = new System.Drawing.Size(1620, 862);
             this.Controls.Add(this.btnMinimize);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.panel2);
@@ -207,5 +327,16 @@
         private System.Windows.Forms.PictureBox btnMinimize;
         private System.Windows.Forms.Panel PainelSeletor;
         private ControleUsuarios.CU_AddQuarto CU_AddQuarto1;
+        private ControleUsuarios.CU_Registro CU_Registro1;
+        private ControleUsuarios.CU_Checkout CU_Checkout1;
+        private ControleUsuarios.CU_DetalhesHospede CU_DetalhesHospede1;
+        private ControleUsuarios.CU_Funcionario CU_Funcionario1;
+        private ControleUsuarios.CU_Registro cU_Registro2;
+        private ControleUsuarios.CU_AddQuarto cU_AddQuarto2;
+        private ControleUsuarios.CU_Registro cU_Registro3;
+        private ControleUsuarios.CU_AddQuarto cU_AddQuarto3;
+        private System.Windows.Forms.Button btnCancelar;
+        private ControleUsuarios.CU_Cancelar CU_Cancelar1;
+        private ControleUsuarios.CU_DetalhesHospede CU_DetalhesHospede2;
     }
 }
